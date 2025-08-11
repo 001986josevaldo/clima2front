@@ -51,7 +51,7 @@ const buscarClima = async () => {
     console.log('📦 CEP ionformado:', cepLimpo)
     // local
     //const response = await fetch(`http://127.0.0.1:5000/clima?cep=${cep.value}`)
-    const response = await fetch(`http://clima2api.up.railway.app/clima?cep=${cepLimpo}`);
+    const response = await fetch(`https://clima2api.up.railway.app/clima?cep=${cepLimpo}`);
     const dados = await response.json()
     console.log('📦 Resultado da API:', dados)
 
