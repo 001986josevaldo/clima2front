@@ -9,7 +9,7 @@
 
             <div class="apps-section">
                 <span>Baixe os apps</span>
-                <button class="btn-climatempo">Climajá</button>
+                <button class="btn-climatempo">Localclima</button>
 
                 <a href="https://play.google.com/store/apps/details?id=seuapp" target="_blank" class="icon android">
                     <i class="fab fa-android"></i>
@@ -22,7 +22,7 @@
             <div class="social-section">
                 <span>Developer</span>
                 <div class="social-icons">
-                    <a href="https://facebook.com/josevaldo.moreira.1" target="_blank" class="icon facebook">
+                    <a href="https://facebook.com/" target="_blank" class="icon facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="https://twitter.com/" target="_blank" class="icon twitter">
