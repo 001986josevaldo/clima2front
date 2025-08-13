@@ -17,7 +17,7 @@ const atualizarDados = (dados) => {
 <template>
   <Header @dadosClima="atualizarDados" />
   <main>
-    <h1>Climajá - Your Weather App</h1>
+    <h1>LOCALCLIMA - Your Weather App</h1>
     <p>
       Search for a zip code and explore weather data and forecasts.</p>
     
