@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="logo-section">
-                <h2 class="logo">CLIMAJÁ</h2>
+                <h2 class="logo">LOCALCLIMA</h2>
                 <p class="subtitle">
                     Imagine a bright yellow sun behind a blue-white cloud.</p>
             </div>
