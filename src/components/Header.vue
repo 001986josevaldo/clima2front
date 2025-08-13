@@ -3,7 +3,7 @@
      <div class="menu-icon" aria-label="Abrir menu">☰</div>
 
     <div class="logo">
-      <strong>CLIMAJÁ</strong>
+      <strong>LOCALCLIMA</strong>
       <p class="subtitle">A Company</p>
     </div>
 

@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <p class="copyright">&copy; 2025 Climajá. Todos os direitos reservados.</p>
+        <p class="copyright">&copy; 2025 Localclima. Todos os direitos reservados.</p>
 
     </footer>
 
