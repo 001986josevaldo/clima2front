@@ -5,6 +5,6 @@
 <template>
   <main>
     <!-- <TheWelcome /> -->
-    <h1>Welcome to LOCALCLIMA! HomeView</h1>
+    <h1>Welcome to LOCAL CLIMA! HomeView</h1>
   </main>
 </template>
