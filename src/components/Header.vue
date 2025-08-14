@@ -1,3 +1,48 @@
+
+<script setup>
+import { ref } from 'vue'
+const cep = ref('') // controle do input
+const loading = ref(false) // Estado de carregamento para a busca
+const emit = defineEmits(['dadosClima', 'loading'])
+
+const buscarClima = async () => {
+  if (!cep.value) return
+  
+  // Validação simples do formato de CEP
+  const regexCep = /^[0-9]{5}-?[0-9]{3}$/;
+  if (!regexCep.test(cep.value)) {
+    alert('Por favor, insira um CEP válido!');
+    return;
+  }
+
+  // Limpar resultados anteriores
+  emit('dadosClima', null)
+
+  try {
+    emit('loading', true) // dispara que está carregando
+    //loading.value = true;  // Inicia o carregamento
+    // 1. Limpa o CEP, removendo o hífen
+    const cepLimpo = cep.value.replace('-', '');
+
+    console.log('📦 CEP ionformado:', cepLimpo)
+    // local
+    //const response = await fetch(`http://127.0.0.1:5000/clima?cep=${cep.value}`)
+    const response = await fetch(`https://clima2api.up.railway.app/clima?cep=${cepLimpo}`);
+    const dados = await response.json()
+    console.log('📦 Resultado da API:', dados)
+
+    // Emite os dados para o componente pai
+    emit('dadosClima', dados)
+    emit('loading', false) // termina o carregamento
+  } catch (error) {
+    console.error('❌ Erro ao buscar clima:', error)
+  }finally {
+    //loading.value = false;  // Finaliza o carregamento
+    
+  }
+}
+</script>
+
 <template>
   <header class="header">
      <div class="menu-icon" aria-label="Abrir menu">☰</div>
@@ -25,46 +70,6 @@
     </button>
   </header>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-const cep = ref('')
-const loading = ref(false) // Estado de carregamento para a busca
-const emit = defineEmits(['dadosClima'])
-
-const buscarClima = async () => {
-  if (!cep.value) return
-  
-  // Validação simples do formato de CEP
-  const regexCep = /^[0-9]{5}-?[0-9]{3}$/;
-  if (!regexCep.test(cep.value)) {
-    alert('Por favor, insira um CEP válido!');
-    return;
-  }
-
-  try {
-
-    loading.value = true;  // Inicia o carregamento
-    // 1. Limpa o CEP, removendo o hífen
-    const cepLimpo = cep.value.replace('-', '');
-
-    console.log('📦 CEP ionformado:', cepLimpo)
-    // local
-    //const response = await fetch(`http://127.0.0.1:5000/clima?cep=${cep.value}`)
-    const response = await fetch(`https://clima2api.up.railway.app/clima?cep=${cepLimpo}`);
-    const dados = await response.json()
-    console.log('📦 Resultado da API:', dados)
-
-    // Emite os dados para o componente pai
-    emit('dadosClima', dados)
-  } catch (error) {
-    console.error('❌ Erro ao buscar clima:', error)
-  }finally {
-    loading.value = false;  // Finaliza o carregamento
-  }
-}
-</script>
-
 
 <style scoped>
 .login-icon {
