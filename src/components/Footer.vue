@@ -2,14 +2,14 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="logo-section">
-                <h2 class="logo">LOCALCLIMA</h2>
+                <h2 class="logo">LOCAL CLIMA</h2>
                 <p class="subtitle">
                     Imagine a bright yellow sun behind a blue-white cloud.</p>
             </div>
 
             <div class="apps-section">
-                <span>Baixe os apps</span>
-                <button class="btn-climatempo">Localclima</button>
+                <span>Download the apps</span>
+                <button class="btn-climatempo">Local clima</button>
 
                 <a href="https://play.google.com/store/apps/details?id=seuapp" target="_blank" class="icon android">
                     <i class="fab fa-android"></i>
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <p class="copyright">&copy; 2025 Localclima. Todos os direitos reservados.</p>
+        <p class="copyright">&copy; 2025 Local clima. All rights reserved.</p>
 
     </footer>
 

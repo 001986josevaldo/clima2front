@@ -30,7 +30,7 @@ const setCarregando = async (status) => {
   <main>
     <h1>LOCAL CLIMA - Your Weather App</h1>
     <p >
-      Informe um CEP para buscar os dados do clima e explore informações sobre temperatura, vento e previsões.
+      Enter a zip code to search for weather data and explore information on temperature, wind, and forecasts.
     </p>
     <!-- Tela de carregamento -->
     <div v-if="carregando" class="loading">

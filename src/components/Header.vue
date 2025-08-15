@@ -55,7 +55,7 @@ const buscarClima = async () => {
      <div class="menu-icon" aria-label="Abrir menu">☰</div>
 
     <div class="logo">
-      <strong>LOCALCLIMA</strong>
+      <strong>LOCAL CLIMA</strong>
       <p class="subtitle">A Company</p>
     </div>
 
