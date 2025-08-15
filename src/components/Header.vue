@@ -30,10 +30,17 @@ const buscarClima = async () => {
     const response = await fetch(`https://clima2api.up.railway.app/clima?cep=${cepLimpo}`);
     const dados = await response.json()
     console.log('📦 Resultado da API:', dados)
-
+      if (dados.erro){
+      alert('CEP não encontrado ou inválido. Por favor, tente novamente.')
+      //alert(dados.erro)
+      emit('loading', false) // termina o carregamento
+      return
+    }
     // Emite os dados para o componente pai
     emit('dadosClima', dados)
     emit('loading', false) // termina o carregamento
+
+
   } catch (error) {
     console.error('❌ Erro ao buscar clima:', error)
   }finally {
@@ -125,8 +132,13 @@ const buscarClima = async () => {
 .search-icon {
   margin-left: 8px;
   color: #f6f2f2;
+  cursor: pointer; /* muda o cursor para mãozinha */
 }
-
+.search-icon:hover {
+  color: #1e90ff;    /* muda a cor ao passar o mouse */
+  transform: scale(1.2); /* aumenta um pouco o tamanho */
+  transition: all 0.2s ease; /* suaviza a animação */
+}
 .login-button {
   background: transparent;
   color: white;
