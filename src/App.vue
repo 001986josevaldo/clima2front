@@ -27,7 +27,7 @@ const setCarregando = async (status) => {
 <template>
   <Header @dadosClima="atualizarDados" @loading="setCarregando" />
 
-  <main>
+  <main class="fundo-clima">
     <h1>LOCAL CLIMA - Your Weather App</h1>
     <p >
       Enter a zip code to search for weather data and explore information on temperature, wind, and forecasts.
@@ -41,6 +41,7 @@ const setCarregando = async (status) => {
 
 
   </main>
+
 
   <Footer />
 </template>
@@ -76,5 +77,15 @@ main {
   font-size: 1.2rem;
   margin: 20px 0;
   color: #555;
+}
+.fundo-clima {
+  background-image: url('/fundo.png'); /* caminho relativo dentro da pasta src/assets */
+  background-size: cover;         /* cobre toda a área */
+  background-position: center;    /* centraliza a imagem */
+  background-repeat: no-repeat;   /* não repete */
+  min-height: 100vh;              /* altura mínima da tela toda */
+  padding: 2rem;                  /* espaço interno */
+  /* color: white;                   se quiser deixar o texto visível */
+
 }
 </style>
